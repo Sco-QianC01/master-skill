@@ -1,0 +1,200 @@
+{
+  "industry": "implant dentistry — surgical placement and prosthetic restoration of osseointegrated dental implants; covers diagnosis & treatment planning, site preparation (bone augmentation, sinus elevation, soft-tissue grafting), implant placement (delayed / immediate / immediate-loading), provisionalization and final restoration (cement / screw retained, custom abutments, full-arch), digital workflow (CBCT planning, intra-oral scanning, guided surgery, CAD-CAM milled prosthetics), and long-term maintenance including peri-implantitis prevention and treatment; NOT general restorative dentistry, NOT orthodontics, NOT pediatric dentistry, NOT maxillofacial oncology / trauma reconstruction, NOT clear-aligner business.",
+  "industry_cn": "口腔种植 (含 单牙/多牙缺失种植 / 全口 All-on-X / 即刻种植 即刻负重 / 上颌窦提升 / 牙槽嵴骨增量 GBR / 软组织移植 / 数字化种植 (CBCT 设计 + 口扫 + 导板 + CAD-CAM 上部) / 种植体周炎防治 / 种植修复 (基台 + 冠 + 杆卡 + 覆盖义齿) — 不含 普通牙体牙髓 / 正畸 / 儿牙 / 口腔颌面外科肿瘤 / 隐形矫治商业)",
+  "industry_en": "implant dentistry",
+  "industry_type": "global_clinical_discipline",
+  "slug": "dentistry-implant",
+  "focus": {
+    "primary": "clinical",
+    "secondary": "biological_biomechanical"
+  },
+  "locale": "global",
+  "profile": "practitioner",
+  "local_materials": {
+    "mode": "none",
+    "paths": [],
+    "covered_tracks": []
+  },
+  "existing_skill": {
+    "found": false,
+    "path": null,
+    "last_research_date": null,
+    "decision": "new"
+  },
+  "skip_sub_skills": false,
+  "_auto_mode_note": "本 intake 由 launchd 04:00 / 16:00 蒸馏 cron 自动生成 (2026-05-17, DistillRequest 用户提交 name_cn='口腔种植', name_en='Dentistry Implant', description='owner-curated batch 2026-05-17'). 无 1-1 用户对话; slug 用 DB 给的 'dentistry-implant' (保持 wrapper happy); industry_en 用 'implant dentistry' (国际期刊 / 学会通用术语, 比 'dentistry implant' 更地道); locale=global 双语并重 — 全球一手主体 = ITI / AO / EAO + Brånemark/Misch/Buser/Tarnow/Lindhe 教科书 + Wiley/Quintessence 期刊; 中国一手 = 中华口腔医学会种植专委会 + 北医口腔 / 华西口腔 / 上海九院 / 中山光华 + 中华口腔医学杂志 (CMA) + 林野 / 宿玉成 / 邱立新 / 满毅 等 KOL. focus=clinical/biological_biomechanical 因 implant dentistry = 强 SOP (诊断 → 设计 → 外科 → 修复 → 维护) + 强 evidence-based + 强生物学 (骨结合 / 软组织生物型 / peri-implant tissue homeostasis). profile=practitioner 因目标受众 = 种植医生 / 牙周医生 / 修复医生 / 颌面外科医生 (非牙助 / 非患者教育). 极强监管: 三类医疗器械 (NMPA/FDA/CE), 高金额自费, 临床警示绝不软化 (peri-implantitis / 上颌窦穿孔 / 下牙槽神经损伤 / 美学失败 / 即刻负重失败).",
+  "triggers": [
+    "种植牙", "种植", "口腔种植", "牙种植", "implant", "dental implant", "implantology", "implant dentistry",
+    "骨结合", "osseointegration", "Brånemark", "Branemark", "Per-Ingvar Branemark",
+    "Straumann", "Nobel Biocare", "Astra Tech", "Dentsply Sirona", "Zimmer Biomet", "BioHorizons",
+    "Osstem", "Megagen", "AnyRidge", "Neodent", "Camlog", "MIS", "BEGO", "Implant Direct",
+    "威高", "WEGO", "百康特", "BLB", "国产种植体",
+    "BLT", "BLX", "Roxolid", "SLActive", "TiZr", "TiUnite",
+    "All-on-4", "All-on-X", "All-on-6", "即刻负重", "immediate loading", "immediate function",
+    "即刻种植", "immediate placement", "immediate implant",
+    "延期种植", "delayed placement", "early placement",
+    "上颌窦提升", "sinus lift", "sinus elevation", "sinus floor augmentation", "侧壁开窗", "Caldwell-Luc",
+    "经牙槽嵴顶", "transcrestal", "Summers technique", "osteotome",
+    "骨增量", "bone augmentation", "GBR", "guided bone regeneration", "骨引导再生",
+    "onlay graft", "block graft", "外置法植骨", "ridge augmentation", "ridge split", "牙槽嵴劈开",
+    "牵张成骨", "distraction osteogenesis",
+    "Bio-Oss", "Bio-Gide", "Geistlich", "Cerabone", "Endobon", "NuOss", "MinerOss", "Ossix",
+    "DBBM", "deproteinized bovine bone", "自体骨", "autograft", "异体骨", "allograft",
+    "膜", "membrane", "可吸收膜", "钛网", "titanium mesh", "PTFE 膜",
+    "PRF", "L-PRF", "Choukroun", "i-PRF", "PRP",
+    "数字化种植", "digital implant", "guided surgery", "导板", "surgical guide", "导航种植", "dynamic navigation",
+    "CBCT", "cone beam CT", "锥形束 CT", "Carestream", "Planmeca", "Vatech", "Morita", "NewTom",
+    "口扫", "intraoral scanner", "TRIOS", "3Shape", "iTero", "Medit", "Shining3D", "数字化印模",
+    "coDiagnostiX", "NobelClinician", "DTX Studio", "Simplant", "BlueSky Plan", "Romexis",
+    "CAD-CAM", "milled abutment", "定制基台", "screw retained", "螺丝固位", "粘接固位", "cement retained",
+    "PEEK", "zirconia abutment", "氧化锆基台", "titanium abutment", "钛基台",
+    "种植体周炎", "peri-implantitis", "种植体周黏膜炎", "peri-implant mucositis", "种植体周病",
+    "骨吸收", "marginal bone loss", "crestal bone loss",
+    "美学区种植", "esthetic zone", "前牙美学", "粉色美学", "PES", "WES", "biotype",
+    "角化龈", "keratinized mucosa", "FGG", "free gingival graft", "CTG", "connective tissue graft",
+    "颧种植", "zygomatic implant", "翼板种植", "pterygoid implant", "短种植体", "short implant",
+    "迷你种植体", "mini implant", "微种植体",
+    "穿牙槽嵴", "trans-alveolar", "穿牙槽嵴顶植骨",
+    "ISQ", "Osstell", "implant stability quotient", "稳定性测量",
+    "ITI", "International Team for Implantology", "AO", "Academy of Osseointegration", "EAO",
+    "European Association for Osseointegration", "ICOI", "AAID", "AAP",
+    "中华口腔医学会", "种植专业委员会", "中华口腔种植学杂志", "口腔颌面外科",
+    "北大口腔", "华西口腔", "上海九院", "中山光华口腔", "首医口腔", "武大口腔", "四川大学华西口腔",
+    "林野", "宿玉成", "邱立新", "满毅", "周磊", "邸萍", "谭建国", "葛林虎", "廖贵清", "胡秀莲", "王兴",
+    "Buser", "Daniel Buser", "Niklaus Lang", "Tomas Albrektsson", "Carl Misch", "Carl E Misch",
+    "Maurice Salama", "Henry Salama", "Dennis Tarnow", "Hom-Lay Wang", "Paulo Malo",
+    "Florian Beuer", "Stefan Lundgren", "Marco Esposito", "Massimo Simion", "Christoph Hämmerle", "Hammerle",
+    "Jan Lindhe", "Sascha Jovanovic", "Pascal Magne",
+    "Lekholm-Zarb", "bone classification", "D1 D2 D3 D4", "bone density",
+    "biologic width", "supracrestal tissue attachment", "platform switching", "platform shift",
+    "macro design", "micro design", "surface topography", "SLA", "anodized", "TiUnite",
+    "进入扭矩", "insertion torque", "primary stability", "secondary stability",
+    "Schneiderian membrane", "上颌窦黏膜", "perforation", "穿孔",
+    "下牙槽神经", "inferior alveolar nerve", "IAN", "颏孔", "mental foramen",
+    "NMPA", "FDA 510k", "CE mark", "ISO 14801",
+    "Brånemark protocol", "two-stage", "one-stage", "submerged", "non-submerged",
+    "Spear Education", "gIDE", "ITI Treatment Guide", "ITI Consensus", "EAO Consensus", "AO Position Paper",
+    "EBD", "evidence-based dentistry", "Cochrane Oral Health", "systematic review",
+    "Magic", "Tarnow rule of 3", "Choquet 1.5mm rule", "interproximal bone"
+  ],
+  "core_subdomains_candidates": [
+    "Single-tooth implant: 评估 (clinical + radiographic + 牙周状况) → 间隙分析 → 设计 (delayed vs immediate) → 外科 (flapless vs flap, 一期 vs 二期) → 修复 (custom abutment + screw vs cement, zirconia vs PFM); 美学区 vs 非美学区 决策分流",
+    "Multi-tooth / partial edentulous: 多颗连冠 vs 多颗单冠 vs 种植桥; pier abutment 中间种植决策; tilted implant; 短跨度 vs 长跨度 桥体悬臂",
+    "Full-arch edentulous / All-on-X (4/6): Malo concept 即刻负重 vs Brånemark 延期; 双侧倾斜植入 + 远中悬臂; 立刻临时 (PMMA bridge) → 终修 (zirconia / titanium frame + zirconia); 颧种植 zygomatic 严重萎缩替代方案; 半数字 vs 全数字 workflow",
+    "Bone augmentation pipeline: 横向骨增量 (onlay block vs particulate GBR vs ridge split) / 垂直骨增量 (block + GBR vs distraction vs titanium mesh) / 上颌窦提升 (侧壁开窗 lateral vs 牙槽嵴顶 transcrestal vs 同期/分期植入) / autograft 取骨区 (下颌支 vs 颏部) 风险与并发症",
+    "Soft-tissue management: 角化龈宽度 ≥2mm 决策; FGG / CTG / VISTA / pouch / 微切口; 美学区种植体周软组织成形; pink esthetic score; immediate provisionalization 软组织 sculpting",
+    "Digital implant workflow: CBCT 设计 (coDiagnostiX / NobelClinician / DTX Studio / Implant Studio / Romexis / R2) → 口扫数据合并 → STL 导板 (tooth-supported / mucosa-supported / bone-supported / pin-fixated) → 引导外科 (fully guided vs pilot-only) → 数字化印模 → CAD-CAM 基台 + 临时冠; 动态导航 (X-Guide / Navident / Yomi) vs 静态导板",
+    "Peri-implant disease: 2017 World Workshop 分类 (peri-implant health / mucositis / peri-implantitis); 病因 (微生物 + 修复体 + 患者因素 + 表面特征); 诊断 (探诊 + 影像 + 骨吸收 ≥2mm); 治疗 (非手术 GBT/AIRFLOW + 抗菌; 手术 切除 / 再生 / explantation)",
+    "Implant system selection: tissue-level (Straumann SLA) vs bone-level (BLT/BLX/Nobel Active); morse taper (Astra EV / Ankylos / Bicon) vs internal hex (Zimmer 3i) vs external hex (Brånemark original); 平台转换 platform switching 价值; 表面处理 SLActive vs TiUnite vs SLA vs Osseotite",
+    "Prosthetic design: screw vs cement; angulated screw access (ASC) channel; multi-unit abutment (MUA); custom CAD-CAM titanium abutment + zirconia crown vs PFM; full-arch zirconia (BruxZir) vs PEKK / PEEK + 个别冠贴面; 咬合 (occlusion) — implant-protected occlusion 与 mutually protected; 夜磨牙者颌垫保护",
+    "Risk & complication management: 神经损伤 (下牙槽 / 颏 / 鼻腭) / 上颌窦穿孔 / 邻牙根损伤 / 种植体折断 / 螺丝松动 / 美学失败 / 早期失败 (≤6 月) vs 晚期失败 (≥1 年); informed consent + 影像归档 + 知情同意 + 病历完整性 在诉讼中的角色",
+    "Maintenance & long-term outcome: 每年随访 (探诊 + 骨水平 + 软组织); 患者菌斑控制 (水牙线 / 牙线 / 间隙刷); 5/10/15/20 年存活率 (95/93/89/82% 业内估); peri-implant 维护频率 3-6 月; 何时 explantation"
+  ],
+  "audience_segments": [
+    "Oral & maxillofacial surgeons (颌面外科医生 — 复杂 GBR / 上颌窦 / 颧种植 / 全身麻醉 大病例)",
+    "Periodontists (牙周科医生 — 牙周 + 种植双轨, 美学区 + 软组织管理强项)",
+    "Prosthodontists (修复科医生 — 美学修复 + 全口 + 数字化 CAD-CAM 强项)",
+    "General dentists with implant practice (全科 + 种植兼修 — 国内民营 + 海外私人诊所主力, 通常做 single + 简单 multi)",
+    "Implant Master / 进修学员 (毕业 1-5 年 寻求 ITI / AO / 国内 进修班)",
+    "海外华人种植医生 / cross-border learner (中英对照查找 EAO / AO / ITI guideline)"
+  ],
+  "non_audience": [
+    "牙科患者 (受众错位, 本 skill 是 clinician 视角, 不做 患者教育)",
+    "齿科技工 (dental technician — adjacent discipline, 偶尔交集但非主流)",
+    "牙助 / 椅旁护士 (chairside assistant)",
+    "正畸医生 / 儿牙医生 / 牙体牙髓医生 (邻近专业, 不重叠)",
+    "牙科器械销售 / 医药代表 (商业视角不在范围)"
+  ],
+  "locale_strategy": {
+    "primary": "global English (Wiley / Quintessence / Karger / Springer journals + 国际学会 ITI/AO/EAO/ICOI consensus + 全球 KOL 教科书 + 厂商 vendor docs)",
+    "secondary": "zh-CN (中华口腔医学会种植专委会 / CMA 中华口腔医学杂志 / 北大口腔 + 华西口腔 + 上海九院 + 中山光华 教研体系 + 林野/宿玉成/邱立新/满毅 教科书 + 国产 + 进口本土化 临床路径)",
+    "zh_CN_blacklist_replacement": "公众号 mp.weixin.qq.com 黑名单 → 用 中华口腔医学会官网 / kq.bjmu.edu.cn / kq.scu.edu.cn / 9hospital.com.cn / 牙博士论坛 (替代 NOT 知乎 / NOT CSDN); 林野 / 宿玉成 等 KOL 课程信息走 北大口腔继续教育 + 行业进修班官网 不走 公众号 截图",
+    "english_priority": "PubMed-indexed RCT + 系统综述 (COIR / IJOMI / JOMI / Cochrane Oral Health) > ITI consensus statements > AO / EAO position papers > 教科书 (Lindhe + Misch + Buser + Tarnow + Albrektsson) > 学会会议 transcripts (EAO Congress / AO Annual / ITI World Symposium) > 教育平台 (Spear / gIDE / ITI Academy / Osseo Academy) > 厂商临床手册 (Straumann/Nobel/Geistlich/BioHorizons) > 行业 podcast > 行业资深博客"
+  },
+  "source_whitelist_pre_emptive_surrogate_primary": {
+    "vendor_docs": [
+      "straumann.com", "ifu.straumann.com", "nobelbiocare.com", "ifu.nobelbiocare.com", "dentsplysirona.com",
+      "geistlich-pharma.com", "biohorizons.com", "zimmerbiomet.com", "osstem.com", "megagen.com",
+      "neodent.com", "camlog.com", "implantdirect.com", "bicon.com", "anky.de",
+      "3shape.com", "planmeca.com", "carestreamdental.com", "vatech.com", "morita.com", "newtom.it",
+      "exocad.com", "blueskybio.com", "osstell.com", "versah.com", "mectron.com",
+      "choukroun.com", "wego.com.cn"
+    ],
+    "society_clinical_guideline": [
+      "iti.org", "iti-academy.org", "osseo.org", "academyofosseointegration.org", "eao.org",
+      "icoi.org", "aaid.com", "perio.org", "ada.org", "aao.org.au"
+    ],
+    "journal_publisher": [
+      "onlinelibrary.wiley.com", "quintpub.com", "karger.com", "link.springer.com",
+      "tandfonline.com", "sagepub.com", "jomi.com", "compendiumlive.com", "ada.org/jada"
+    ],
+    "academic": [
+      "pubmed.ncbi.nlm.nih.gov", "ncbi.nlm.nih.gov/pmc", "doi.org", "europepmc.org",
+      "scholar.google.com"
+    ],
+    "education_platform": [
+      "speareducation.com", "gidedental.com", "iti-academy.org", "osseoacademy.com",
+      "dentalxp.com", "dentalimplants.com", "dentaltown.com"
+    ],
+    "regulator": [
+      "fda.gov", "ema.europa.eu", "nmpa.gov.cn", "tga.gov.au", "pmda.go.jp"
+    ],
+    "china_university_clinic": [
+      "kq.bjmu.edu.cn", "kqyy.bjmu.edu.cn", "kqyy.bjmu.edu.cn", "scukqyy.com", "kq.scu.edu.cn",
+      "9hospital.com.cn", "shckq.com", "stomatology.cn", "cma.org.cn"
+    ]
+  },
+  "source_blacklist_zh_cn_known_traps": [
+    "mp.weixin.qq.com (微信公众号 — 即使林野 / 宿玉成 等 KOL 也常发公众号, 但 source_verifier 严禁 — 改用学会 / 大学医院 / 期刊官网 替代)",
+    "blog.csdn.net / www.cnblogs.com / www.jianshu.com (技术博客平台 — 不出现在口腔但保险)",
+    "www.zhihu.com / zhuanlan.zhihu.com (问答平台 — 患者教育常见, 医生原创少)",
+    "baike.baidu.com / wenku.baidu.com (百度系 — 二手转述泛滥)",
+    "developer.aliyun.com (阿里云 — 已在 BLACKLISTED_HOSTS line 238, 即使是 KOL 视频转贴也不允许)"
+  ],
+  "ai_hype_decay_window": "12-24 月 (口腔种植的 AI 应用主要在: 1. CBCT 影像 AI 自动分割 + 神经标定 + 骨密度分析 — Diagnocat / Denti.AI / Ai-Dental — 2024-2025 进入临床, 准确度持续提升; 2. AI 辅助 智能 设计 implant 位置 与 角度 — DTX Studio Implant 2.0 / 3Shape Implant Studio 6.x — 替代部分手工 planning; 3. AI 个性化 治疗方案 与 患者沟通; 4. 大模型 实时 病例咨询 (ChatGPT / 国产医疗大模型 嵌入). 但 临床落地 实证 RCT 仍稀少, 6-12 月以上 hype 衰减需谨慎. master skill metadata 标 ai_assistance 节, 不深度展开 model 评测.)",
+  "regulatory_warning_priorities": [
+    "三类医疗器械 (NMPA Class III / FDA Class II 510k / CE Class IIb-III) — 种植体 + 上部基台 + 部分骨增材 + CBCT 都要注册证, 跨境采购未注册产品涉嫌违法",
+    "适应症 vs 禁忌症 — 全身禁忌 (controlled diabetes HbA1c ≤ 7.0%, 双膦酸盐 BRONJ 风险, 头颈放疗 ≥ 50 Gy, 严重 osteoporosis 患者风险等) 必须知情同意书内明记",
+    "informed consent — 知情同意 是高发医疗纠纷出发点, 美学失败 / peri-implantitis / 神经损伤 都需图文 + 患者签字 + 院前影像归档",
+    "广告法 — 中国《医疗广告管理办法》 + 《广告法》 严禁 'XXX 教授全国第一' / '终身保用' / '0 风险' 等绝对化用语",
+    "处方权 — 种植牙在多国需 dental surgeon / oral surgeon 资质 + 进修证书, 国内卫健委明确种植专项资质",
+    "数据隐私 — CBCT 患者影像 + 病史 受 HIPAA (US) / GDPR (EU) / 个保法 (中国) 保护, 跨境共享前需脱敏"
+  ],
+  "anti_patterns_seed": [
+    "迷信品牌 / 系统 万能 (Straumann / Nobel 也无法救低骨密度 + 患者菌斑控制差 + 抽烟 30 支/日)",
+    "过度营销 即刻种植 / 即刻负重 — 全国大量 民营连锁宣传 '当天种 当天用', 但 国际共识 immediate loading 严格限定 适应症 (primary stability ISQ ≥ 70 + 殆力可控 + 骨量充足 + 患者依从)",
+    "过度追求 短种植体 / mini implant 替代骨增量 — 短期方便但 长期 crown-root ratio 不利, 高失败率",
+    "忽视 角化龈 < 2mm 风险 — 即使 osseointegrated 良好, 软组织不足易致 mucositis → peri-implantitis",
+    "口扫数据 不验证 偏差 直接 设计 — 全口 / 多颗 长跨度 时 累积 stitching 误差 致 临床 ill-fit",
+    "国产种植体 一概拒绝 OR 一概接受 — 应基于 NMPA 注册证 + 自家长期随访数据 + 厂商支持 综合判断",
+    "Cement-retained 全口 桥 — 黏接剂残留 致 peri-implantitis 高发, 国际共识 倾向 screw-retained 多单位",
+    "All-on-4 适应症泛化 — 即使 partial edentulous 也 拔光做 All-on-4 (overtreatment), 国际共识 严格限定 全口无牙颌 + 牙弓骨量条件",
+    "CBCT 不术前必检 / 仅 拍 panoramic — 漏诊下牙槽神经走向 / 上颌窦解剖变异 / 骨密度 / 邻牙根损伤 高风险",
+    "广告医生 vs 学会医生 模糊 — 业内本科生开 6-12 月 短期班 即号称 '种植专家', 与 ITI Fellow / AO Fellow / 北医硕博 5-8 年训练 不可同日而语"
+  ],
+  "honesty_boundary_seed": [
+    "本 skill 是 临床决策 + 系统认知 + 行业 OS, 不替代 医生 临床判断 / 影像读片 / 手术经验",
+    "信息截止 2026-05, 工具 + 数字化软件 + AI 模块 6-12 月 高频迭代; 心智模型 + 临床路径 + 教科书共识 1-2 年才动",
+    "公开材料偏差 — 成功病例发声多 (case report bias), 失败案例 + peri-implantitis + 中长期失败 sparse; 厂商赞助 RCT 多 (industry funding bias); 中国一手 KOL 内容 多 公众号 (黑名单) → 大学医院 / 学会 / 期刊 替代",
+    "中国 vs 海外 临床条件差异 — 国产种植体 性价比 + NMPA 注册产品库 + 民营连锁主导市场 与 美/欧 牙医协会主导 + 私人诊所主流 + 医保覆盖差异极大, 不可直接套移 protocol",
+    "强监管 + 高金额自费 + 医疗纠纷高发 — 任何 推荐 都需 medico-legal 视角 + 知情同意 + 病历完整性",
+    "AI / 数字化 临床落地 实证仍稀少 — 大量 vendor PR + 单中心初步 RCT, 长期 outcome 缺乏; 谨慎 视为 辅助 而非 替代"
+  ],
+  "expected_track_signals": {
+    "01-figures": "12-18 figures, 全球 10-13 + 中国 4-6 + 1-2 anti-figure (反面案例 如 过度营销 学术不端), 8-10 流派 (Brånemark protocol / Buser SLA / Tarnow esthetics / Misch contemporary / Malo All-on-4 / Salama esthetic / Lindhe periodontal-implant / Esposito Cochrane EBD / 林野-邱立新 北医 / 满毅-廖贵清 华西-中山)",
+    "02-tools": "8-12 implant 系统 (5-7 全球 + 2-3 韩国 + 1-3 国产) + CBCT + 口扫 + 设计软件 + 导板 + 骨增材 + PRF + ISQ 测量 + 数字化全链, 总 50-80 工具行",
+    "03-workflows": "5-8 完整 SOP (single-tooth delayed / single-tooth immediate / multi-tooth posterior / 美学区单牙 / 全口 All-on-4 / 上颌窦提升同期 / GBR 分期 / peri-implantitis 治疗), 每个 入门 vs 资深 路径分流",
+    "04-canon": "25-40 必读 (10-15 全球教科书 + 5-8 ITI/AO/EAO 共识 + 5-8 经典 RCT/系统综述 + 5-8 中国教材), 历经 Brånemark 1985 → ITI Treatment Guides 1-12 → 2017 World Workshop peri-implant",
+    "05-sources": "20-30 信息源 (5-8 期刊 + 5-8 学会会议 + 3-5 podcast/平台 + 3-5 中国 学会/期刊), 全部 verified primary 域名",
+    "06-glossary": "60-80 术语 (临床 + 骨/软组织生物学 + 影像 + CAD-CAM + 修复 + 共识 + 监管), 含 2017 peri-implant classification + Lekholm-Zarb bone classification + Misch D1-D4 + 平台转换 + ISQ scale"
+  },
+  "_writer_notes_for_phase_1_subagents": "(1) 域名预警 — 以下域名 source_verifier auto-classify 为 secondary/unknown, 必须从一开始 declared=surrogate_primary + note literal 'vendor docs' / '协会' / 'syllabus' / 'lecture' 之一, 否则 Phase 1.5 大规模 UPGRADE 违规: straumann.com, nobelbiocare.com, geistlich-pharma.com, biohorizons.com, osstem.com, megagen.com, 3shape.com, planmeca.com, carestreamdental.com, vatech.com, exocad.com, blueskybio.com, osstell.com, versah.com, iti.org, osseo.org, eao.org, icoi.org, aaid.com, perio.org, ada.org, speareducation.com, gidedental.com, onlinelibrary.wiley.com, quintpub.com, karger.com, link.springer.com, kq.bjmu.edu.cn, kq.scu.edu.cn, 9hospital.com.cn, cma.org.cn, stomatology.cn. (2) 中国 KOL (林野 / 宿玉成 / 邱立新 / 满毅 / 邸萍 / 周磊 / 谭建国 / 廖贵清) 主战场是公众号 + 医院内部讲座, source_verifier 强禁 mp.weixin.qq.com — 全部走 大学医院 (kq.bjmu.edu.cn 北医口腔 / kq.scu.edu.cn 华西口腔) 教师页 + 中华口腔医学会会议页 + 中华口腔医学杂志 (cma.org.cn) 论文 + 北医出版社 / 人卫出版社 教科书 listing. 不要把 KOL 个人公众号转贴当 surrogate_primary 试图绕路. (3) PubMed-indexed RCT 直接 doi.org + pubmed.ncbi.nlm.nih.gov + ncbi.nlm.nih.gov/pmc 域名 — auto-classify 通常 primary OK, 不用 surrogate. (4) 临床警示绝不软化 — peri-implantitis / 上颌窦穿孔 / 神经损伤 / All-on-4 适应症泛化 / 即刻负重失败 / 美学失败 反例样本 全 引 一手 published case report + 学会立场, 不和稀泥. (5) 厂商赞助 RCT bias 必须标注 — 教科书 + Cochrane Esposito 系统综述 比 vendor 单中心 RCT 权重高. (6) 国产种植体 (威高 WEGO / 百康特 BLB / 创英 CIM / Anyone / 大博医疗) — 中国一手 = NMPA 注册证号 + 论文 + 行业进修班; 不要 直接 dismiss 也不要 厂商背书. (7) 务必 区分 implant system 学派 (tissue-level Straumann SLA vs bone-level BLT/BLX vs morse taper Astra/Ankylos vs internal hex Zimmer vs external hex Brånemark original), 这是 Phase 2 智识谱系 核心维度. (8) Phase 1.5 mechanical scan 前自查: 每条 manifest entry 的 declared 与 auto 是否一致, vendor / 学会 / publisher / 大学医院 全部 declared=surrogate_primary + note 含 literal whitelist 关键词. (9) 反面 figures (1-2): 如 过度营销 民营连锁 OR 国际学术不端案例 OR 国内被吊销资质医生案例, 全 引 一手新闻 + 监管处罚文件 (不软化), 但 不指名 攻击 个人, 用 '某连锁机构 2024' / 'XX 案例' 框架. (10) Phase 2 心智模型 候选: ① osseointegration 是 时间 + 生物学 + 机械 三轴函数 (不是 单一植入操作); ② 软组织 + 硬组织 缺一不可 (临床长期成功 = 骨 + 牙周 + 修复 三角); ③ Restoration-driven implant placement (拔牙后先决定 修复目标 反推 implant 位置 / 角度 — Maurice Salama 核心); ④ Biotype-aware esthetic (薄牙龈 + 高微笑线 = 高风险, 厚牙龈 = 低风险); ⑤ Risk stratification 优于 universal protocol (Buser 2017 SAC 分类 Simple/Advanced/Complex); ⑥ 长期维护 决定 5/10/15 年存活率 (单次种植 ≠ 终身使用); ⑦ Evidence-based dentistry — RCT + 系统综述 > 单次 case report > 厂商 marketing.",
+  "subagent_dispatch_prompt_template_hints": {
+    "wave1_track04_canon": "搜 (a) Brånemark Tissue-Integrated Prostheses 1985 (Quintessence); (b) Lindhe Clinical Periodontology and Implant Dentistry 7th ed (Wiley); (c) Misch Contemporary Implant Dentistry 4th ed (Elsevier); (d) Buser 20 Years of Guided Bone Regeneration 3rd ed (Quintessence); (e) Tarnow Aesthetic Restorative Dentistry 2nd ed (Quintessence); (f) ITI Treatment Guides 1-12 (iti.org / Quintessence); (g) Albrektsson Osseointegrated Titanium Implants criteria 1986 paper; (h) 2017 World Workshop Classification of Periodontal and Peri-implant Diseases (J Periodontol/J Clin Periodontol); (i) Malo All-on-4 series 2003-2019 (Clin Implant Dent Relat Res); (j) Cochrane Oral Health Group Esposito 系列 systematic reviews; (k) 中国: 林野《口腔种植学》, 宿玉成 主编 《现代口腔种植学》(北医 / 人卫), 邱立新 即刻种植专著. Output 25-40 行 manifest.",
+    "wave1_track05_sources": "(a) 期刊: Clin Oral Implants Res (COIR), Int J Oral Maxillofac Implants (JOMI), Int J Periodontics Restorative Dent, J Periodontology, J Prosthet Dent, J Clin Periodontol, Implant Dentistry, J Esthet Restor Dent; (b) 会议: EAO Congress, AO Annual Meeting, ITI World Symposium, ICOI World Congress, 中华口腔医学会种植学专委会年会; (c) 学会官网: iti.org, osseo.org, eao.org, icoi.org; (d) 平台: ITI Academy (iti.academy.org), Spear Education, gIDE, dentalXP; (e) podcast: The Implant Show, Talking Implants, ITI Online Academy series; (f) 中国: 中华口腔医学杂志, 中华口腔种植学杂志, 北大口腔, 华西口腔. 全 verified domain.",
+    "wave1_track06_glossary": "搜 (a) 2017 World Workshop peri-implant classification 完整术语; (b) Lekholm-Zarb bone classification 1985; (c) Misch D1-D4 bone density; (d) ISQ Osstell scale; (e) primary/secondary stability; (f) keratinized mucosa / biologic width / supracrestal tissue attachment; (g) 平台转换 platform switching; (h) macro/micro/nano surface topography; (i) immediate placement 分类 (Hammerle Type 1/2/3/4 2004); (j) ISO 14801:2016; (k) FDA 510(k), CE mark, NMPA; (l) pink esthetic score PES + white esthetic score WES (Belser); (m) Tarnow rule of 3 (3mm interimplant distance); (n) Choquet 1.5mm rule (邻牙 distance); (o) All-on-X (Malo) terminology; (p) Brånemark protocol two-stage submerged.",
+    "wave2_track01_figures": "Wave 1 canon 给的作者 + sources 给的 KOL 名单加权; 12-18 figures, 全球: Per-Ingvar Brånemark (founder, 2014 deceased), Tomas Albrektsson (osseointegration criteria), Daniel Buser (ITI / SLA / GBR), Niklaus Lang (peri-implant disease), Carl E Misch (founder ICOI, contemporary implant dentistry, 2017 deceased), Maurice & Henry Salama (esthetic), Dennis Tarnow (interproximal bone, Tarnow rule of 3), Hom-Lay Wang (Univ Michigan, peri-implantitis treatment), Marco Esposito (Cochrane EBD), Paulo Malo (All-on-4), Florian Beuer (digital + CAD-CAM), Stefan Lundgren (sinus elevation), Pascal Magne (biomimetic prosthodontics 邻近 implant esthetic); 中国: 林野 (北大口腔 / All-on-X), 宿玉成 (北大口腔 / 现代种植学主编 + ICOI 中国分会), 邱立新 (北大口腔 / 即刻种植), 满毅 (华西口腔 / 复杂骨增量), 周磊 (中山光华 / 数字化), 廖贵清 (中山光华 / 全口); anti: 民营连锁过度营销 + 学术不端 + 国际 BRONJ 案例 1-2 个. 每个 figure: 核心一句话 + 代表作 (书/论文/会议主旨) + 争议 (有则记) + 近期动态 12 月内.",
+    "wave2_track02_tools": "Wave 1 canon + sources 出现频次最高的 implant 系统 + 影像 + 数字化软件优先; 8-12 implant system 全覆盖 (Straumann BLT/BLX/Roxolid/SLActive + Nobel Biocare Active/Replace/Zygoma + Astra EV + Ankylos Morse + Zimmer Biomet 3i Pro + BioHorizons Laser-Lok + Camlog + Osstem TS III + Megagen AnyRidge + Neodent + 威高 WEGO / 百康特 BLB / 创英 CIM 国产) + CBCT 主流机型 (Carestream CS9600/9300, Planmeca Promax, Vatech Green X, Morita Veraviewepocs, NewTom Giano HR) + 口扫 (3Shape TRIOS 5, iTero Lumina/Element, Medit i700, Carestream CS3700, Planmeca Emerald, Shining3D Aoralscan 3) + 设计软件 (coDiagnostiX Dental Wings, Nobel DTX Studio Implant, 3Shape Implant Studio, Simplant Materialise, BlueSky Plan, Planmeca Romexis, Megagen R2, Smop SwissMeda) + 导板厂 (in-house 3D print + Sicat + R+K 数字化中心 + 国内 大博 / 朗呈) + 动态导航 (X-Guide, Navident, Yomi Neocis, AccuNavi) + 骨增材 (Bio-Oss + Bio-Gide Geistlich + Cerabone Botiss + Endobon Zimmer + NuOss ACE + MinerOss BioHorizons + OsteoBiol Tecnoss + 国产 BAM 北京 + 上海贝奥) + PRF (Choukroun L-PRF + IntraSpin Healess + i-PRF) + ISQ (Osstell Beacon + Osstell IDx) + 表面活化 (Yamato OptiZyme + 紫外光活化) + 牙周维护 (AIRFLOW GBT + Hu-Friedy Ultrasonic + Cumdente PEEK 刮治器). 每条标 vendor 一手 docs URL.",
+    "wave2_track03_workflows": "整合 Wave 1 + Wave 2 figures + tools 输出, 写 7-9 SOP: (1) Single-tooth posterior delayed (8-12 weeks post-extraction, 2-stage submerged Brånemark protocol 经典); (2) Single-tooth anterior immediate placement + immediate provisional (高难, Tarnow + Salama Buser 2020 ITI Consensus); (3) Multi-tooth posterior bridge on 2-3 implants (短跨度); (4) Full-arch upper All-on-4 immediate loading (Malo protocol); (5) Full-arch lower All-on-4 immediate loading (Malo protocol); (6) Sinus lift lateral approach + simultaneous implant (Bo bone 已有 ≥5mm 高度); (7) Sinus lift lateral approach + staged implant (≤4mm 残余骨高度, 4-6 月二期); (8) Trans-crestal sinus lift Summers technique (≥6mm 残余骨高度, 同期); (9) GBR + horizontal ridge augmentation + 二期 implant (Buser 5mm rule); (10) Peri-implantitis 非手术 + 手术 治疗 (2017 EFP guideline); (11) Zygomatic implant for severe maxillary atrophy. 每个 SOP 含: 适应症 / 禁忌 / 入门路径 (传统器械 + 手工设计) / 资深路径 (数字化 + 即刻负重 + 个性化基台) / 常见并发症 + 应急. 必须每个 SOP 含 `**资深路径**: 跳过/优化/额外` 显式 diff."
+  }
+}
