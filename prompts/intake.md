@@ -33,6 +33,26 @@
 
 如果用户坚持要做宽行业 → 警告一次后接受，但在 SKILL.md 诚实边界里写明「本 skill 跨度较宽，深度受限」。
 
+### 1.1 title（必填，由 agent 生成）
+
+`industry` 字段确认合格粒度后，agent 立即生成一个 **4-12 codepoint 的 zh-CN 短标题** 作为目录卡片 / 详情页 H1 的主显示。规则：
+
+- 长度 4-12 codepoint（ASCII 与 zh-CN 各算 1；例：`中医诊疗`=4，`LLM agent 基建`=12，`AI agent 变现`=12）
+- 不带括号 / 不带破折号 / 不带斜杠 / 不带长英文描述
+- 优先 zh-CN；允许 `AI` / `LLM` / `iOS` / `SEO` 等行业固定缩写
+- 不复读 slug，但要凝练表达行业本质
+
+| Industry | Title |
+|---|---|
+| LLM agent infra | LLM agent 基建 |
+| 中医诊疗 (Traditional Chinese Medicine) | 中医诊疗 |
+| 中国网站备案 | ICP 备案 |
+| Cybersecurity Red Team | 红队渗透 |
+| Software Architecture | 软件架构 |
+| iOS App Launch | iOS 上架 |
+
+生成后展示给用户：「title 我打算用 `<title>`，OK?」用户改一字也可以，但 codepoint 数仍要落在 4-12 区间。`skill_writer.parse_intake()` 会硬性校验长度 + banned chars，违反就 retry Phase 0。
+
 ### 2. focus（可选，默认 `comprehensive`，**支持组合**）
 
 **问什么**：「你想要全景画像，还是某个角度优先？技术 / 商业 / 学术 / 操作？」
@@ -193,6 +213,8 @@ ASSISTANT 回复:
 {
   "industry": "LLM agent infra",
   "industry_cn": "LLM agent 基础设施",
+  "industry_en": "LLM agent infra",
+  "title": "LLM agent 基建",
   "slug": "llm-agent-infra",
   "focus": "comprehensive",
   "locale": "global",
@@ -214,6 +236,7 @@ ASSISTANT 回复:
 
 字段规则：
 - `slug`：industry 转 kebab-case，去掉空格 / 特殊字符。例：`LLM agent infra` → `llm-agent-infra`、`跨境电商运营` → `cross-border-ecom-ops`
+- `title`：4-12 codepoint zh-CN 短标题（catalog UI 主显示），不带括号 / 破折号 / 斜杠
 - `industry_cn`：如果 locale 是 zh-CN 必填，否则可选
 - `local_materials.mode`：见 SKILL.md Phase 1 的模式判断表
 - `warnings`：用户拒绝细化、locale 不平衡、existing skill 但要求新建等需要在最终 SKILL.md 诚实边界节复述的事
