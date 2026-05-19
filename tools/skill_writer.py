@@ -113,6 +113,22 @@ def parse_intake(intake_path: Path) -> dict[str, Any]:
     if missing:
         raise SkillWriterError(f"intake.json missing required fields: {missing}")
 
+    title = data.get("title")
+    if title is not None:
+        if not isinstance(title, str):
+            raise SkillWriterError(
+                f"intake.json title must be a string, got {type(title).__name__}"
+            )
+        n = len(title)
+        if n < 4 or n > 12:
+            raise SkillWriterError(
+                f"intake.json title length {n} outside 4-12 codepoints: {title!r}"
+            )
+        if any(ch in title for ch in "()（）—/\\\n\t"):
+            raise SkillWriterError(
+                f"intake.json title contains banned chars (parens/dash/slash/whitespace): {title!r}"
+            )
+
     return data
 
 
