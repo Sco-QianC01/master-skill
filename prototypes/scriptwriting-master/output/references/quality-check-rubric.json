@@ -1,0 +1,115 @@
+{
+  "skill_dir": "/Users/sway003/master-skill/skill/prototypes/scriptwriting-master/output",
+  "verdict": "PASS",
+  "counts": {
+    "pass": 16,
+    "partial": 1,
+    "fail": 0,
+    "needs_subagent": 0,
+    "skipped": 0
+  },
+  "results": [
+    {
+      "id": "1",
+      "label": "心智模型数 (3-7)",
+      "status": "pass",
+      "detail": "7 models (in [3, 7])"
+    },
+    {
+      "id": "2",
+      "label": "心智模型局限 100% 填",
+      "status": "pass",
+      "detail": "all 7 models have 局限 field"
+    },
+    {
+      "id": "3",
+      "label": "Playbook 数 (5-10)",
+      "status": "pass",
+      "detail": "10 rules (in [5, 10])"
+    },
+    {
+      "id": "4",
+      "label": "Playbook 案例 ≥ 1",
+      "status": "pass",
+      "detail": "all 10 rules have 案例"
+    },
+    {
+      "id": "5",
+      "label": "工具三层覆盖",
+      "status": "pass",
+      "detail": "必备=7 场景化=7 新兴=5"
+    },
+    {
+      "id": "6",
+      "label": "工作流入门-资深差异 ≥ 80%",
+      "status": "pass",
+      "detail": "90% workflows have ≥ 2 senior diffs"
+    },
+    {
+      "id": "7",
+      "label": "表达 DNA 辨识度",
+      "status": "partial",
+      "detail": "voice samples library: 8 entries (target ≥ 8), voice_confidence: medium — Phase 4.3 subagent run still recommended to confirm voice fidelity"
+    },
+    {
+      "id": "8",
+      "label": "诚实边界 ≥ 3 条",
+      "status": "pass",
+      "detail": "7 boundary items"
+    },
+    {
+      "id": "9",
+      "label": "一手来源 ≥ 50% (自报)",
+      "status": "pass",
+      "detail": "primary ratio = 93% (≥ 50%)"
+    },
+    {
+      "id": "10",
+      "label": "Agentic Protocol 维度 (3-10)",
+      "status": "pass",
+      "detail": "7 dimensions (in [3, 10])"
+    },
+    {
+      "id": "11",
+      "label": "时效性标注完整",
+      "status": "pass",
+      "detail": "12 markers across 4 key sections"
+    },
+    {
+      "id": "12",
+      "label": "多 figure 共识门槛",
+      "status": "pass",
+      "detail": "all 7 models cite ≥ 2 figures"
+    },
+    {
+      "id": "13",
+      "label": "URL 一手机械验证 ≥ 50%",
+      "status": "pass",
+      "detail": "manifest first-hand 220/235 = 93.6% (verified_primary=47, surrogate_primary=173)"
+    },
+    {
+      "id": "14",
+      "label": "无黑名单 URL",
+      "status": "pass",
+      "detail": "0 blacklisted, 0 manifest-bucket violations, 0 prose-cited blacklisted URLs (235 manifest entries)"
+    },
+    {
+      "id": "15",
+      "label": "freshness 标注 ≥ 70%",
+      "status": "pass",
+      "detail": "manifest: 100% entries fresh-dated"
+    },
+    {
+      "id": "16",
+      "label": "claim → evidence ≥ 2 source_ids",
+      "status": "pass",
+      "detail": "all 7 models cite ≥ 2 distinct source_ids"
+    },
+    {
+      "id": "17",
+      "label": "数字 / deadline / 拒审率 必带来源 + 置信度",
+      "status": "pass",
+      "detail": "7/8 numbers cited (source_id or caveat) = 88%"
+    }
+  ]
+}
