@@ -1,0 +1,67 @@
+{
+  "figure_name": "任正非 Ren Zhengfei",
+  "figure_slug": "ren-zhengfei-huawei",
+  "role": "Founder & President, Huawei (1987-至今)",
+  "role_cn": "华为创始人 / 总裁",
+  "industry": {
+    "cn": "CEO 修炼",
+    "en": "CEO Craft"
+  },
+  "master_skill_parent": "ceo-master",
+  "school": "流派 E — 东方 CEO OS",
+  "parallel_anchors": ["jeff-bezos-amazon", "andy-grove-intel"],
+  "core_oneliner": "把 CEO 工作定义为「灰度 (拒绝非黑即白) + 自我批判 (制度化反省) + 持续 paranoia (华为的冬天) + 力出一孔 (战略聚焦) + 蓝军红军 (制度化挑战自己)」 — 东方 CEO OS 派核心代表",
+  "mental_models_count": 7,
+  "decision_heuristics_count": 10,
+  "voice_samples_count": 11,
+  "voice_samples_breakdown": {
+    "type_A_internal_talks": 4,
+    "type_B_executive_talks": 3,
+    "type_C_media_interviews": 3,
+    "type_D_self_criticism": 2,
+    "original_quote_50plus_chars": 4,
+    "original_quote_30plus_chars": 3,
+    "paraphrased_with_source": 4
+  },
+  "sources": {
+    "primary_count": 5,
+    "primary_ids": ["T01-S012", "T01-S013", "T01-S014", "T01-S015", "T01-S016"],
+    "primary_with_tools_overlap": ["T02-S005", "T02-S081"],
+    "primary_with_canon_overlap": ["T04-S037", "T04-S038"],
+    "secondary_count": 1,
+    "secondary_ids": ["T01-S110"],
+    "blacklist_excluded": ["zhihu.com", "wechat", "baidu baike"]
+  },
+  "phase_4_verdict": {
+    "sanity_check": "PASS (3/3)",
+    "edge_case": "PASS (推断带 disclaimer)",
+    "voice_check": "PASS (任风格可识别)",
+    "overall": "PASS"
+  },
+  "boundaries": {
+    "out_of_scope": [
+      "华为 + 政府关系 / 5G 安全 / 美国制裁中事实陈述偏差 — 地缘政治",
+      "996 / 狼性 / 奋斗者协议 — 引用任表达 + 法律 996 违法判决双标; 不背书",
+      "任私人生活 / 孟晚舟 / 家族细节"
+    ],
+    "tensions_acknowledged": [
+      "灰度 (认识论谦逊) vs 任本人决策力 (force of personality)",
+      "「干部要敢于自我否定」 vs 任 80+ 仍掌实权 + 孟晚舟轮值董事长"
+    ]
+  },
+  "creation": {
+    "created_by": "master-skill Phase 3 Step 3 cross-skill composition subagent",
+    "creation_date": "2026-05-22",
+    "nuwa_skill_path": "/Users/sway003/.claude/skills/nuwa-skill/",
+    "subagent_prompt_template": "skill/prompts/sub-skill-figures.md"
+  },
+  "files": {
+    "skill_md": "SKILL.md",
+    "meta_json": "meta.json",
+    "references": [
+      "references/source-list.md",
+      "references/thought-fingerprint.md",
+      "references/voice-samples.md"
+    ]
+  }
+}

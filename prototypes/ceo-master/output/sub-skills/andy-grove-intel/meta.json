@@ -1,0 +1,28 @@
+{
+  "skill_id": "andy-grove-intel",
+  "skill_type": "person_sub_skill",
+  "parent_master_skill": "ceo-master",
+  "persona_name": "Andy Grove",
+  "persona_name_cn": "安迪·格鲁夫",
+  "persona_role": "Former CEO, Intel (1987-1998); author of High Output Management + Only the Paranoid Survive",
+  "persona_role_cn": "Intel 前 CEO / 经营科学奠基者",
+  "core_oneliner": "把 CEO 工作定义为「output = leverage × work; 1:1 + staff meeting + OKR cascade 是 CEO 节奏骨架; only the paranoid survive 战略转折点 (SIP)」 — Operator-Engineer 派奠基, 影响 Bezos / Doerr / Ben Horowitz 三代 CEO",
+  "industry_cn": "CEO 修炼",
+  "industry_en": "CEO Craft",
+  "school_of_thought": "Operator-Engineer CEO 流派 (流派 B)",
+  "ground_truth_sources": [
+    "T01-S007 / T04-S005 — High Output Management (1983/1995)",
+    "T01-S008 / T04-S007 — Only the Paranoid Survive (1996)",
+    "T01-S011 — Stanford ETL 1998 talk",
+    "T01-S009 — Intel official Grove biography",
+    "T01-S010 / T04-S082 — Stanford GSB Grove strategic leader case"
+  ],
+  "nuwa_phase_4_verdict": "pass",
+  "voice_confidence": "high",
+  "exclusivity_check": "passed (mainstream 共识 vs Grove 独特立场 已在 thought-fingerprint.md 第四节明确划线)",
+  "deceased": true,
+  "death_year": 2016,
+  "boundary_disclaimer": "本 sub-skill 仅蒸馏 Grove 公开 + 出版作品 (HOM / OPS / Stanford ETL 1998 / Intel 官方传记). 不模拟个人对话. Grove 当年的 Intel context 与今日某些行业 (e.g. 软件 SaaS / 创作者经济) 已不完全可比, 框架可借用但需 own context 重新评估.",
+  "created_at": "2026-05-22",
+  "h1_first_line": "# Andy Grove (Intel 前 CEO / 经营科学奠基者) 视角 · Sub-skill"
+}

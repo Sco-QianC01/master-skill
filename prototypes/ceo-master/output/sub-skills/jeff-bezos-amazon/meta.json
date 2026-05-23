@@ -1,0 +1,52 @@
+{
+  "figure_name": "Jeff Bezos",
+  "figure_name_cn": "杰夫·贝索斯",
+  "figure_slug": "jeff-bezos-amazon",
+  "role": "Founder & former CEO, Amazon (1994-2021)",
+  "role_cn": "Amazon 创始人 / 前 CEO",
+  "industry_cn_name": "CEO 修炼",
+  "industry_en_name": "CEO Craft",
+  "parent_master_skill": "ceo-master",
+  "skill_type": "person-sub-skill",
+  "distilled_via": "nuwa-skill flow (5-phase) + master-skill prompts/sub-skill-figures.md",
+  "distilled_date": "2026-05-22",
+  "h1_first_line": "# Jeff Bezos (Amazon 创始人 / 前 CEO) 视角 · Sub-skill",
+  "core_oneliner": "把 CEO 工作定义为 long-term invariants + 大量 bets + Type 1/2 决策 + 6-pager + 致股东信 anchor — 写作 = 思考 + 客户至上 invariant 永不变",
+  "mental_models_count": 9,
+  "decision_heuristics_count": 10,
+  "voice_samples_categories": 4,
+  "voice_samples_total": 10,
+  "primary_corpus": [
+    "Amazon 25 致股东信 1997-2020 全集",
+    "2016 letter (Type 1/2 + Day 1 + high-velocity)",
+    "2020 final CEO letter",
+    "Lex Fridman Podcast #405 (2024 2h+)",
+    "TED Princeton 2010 'We Are What We Choose'",
+    "Invent & Wander (Walter Isaacson 编 2020 HBR Press)",
+    "Working Backwards (Bryar & Carr 2021)"
+  ],
+  "anchor_source_ids": [
+    "T01-S001",
+    "T01-S002",
+    "T01-S003",
+    "T01-S004",
+    "T01-S005",
+    "T01-S006",
+    "T01-S107",
+    "T02-S009",
+    "T02-S023",
+    "T04-S023",
+    "T04-S053",
+    "T04-S055"
+  ],
+  "controversial_stances_locked": [
+    "Most decisions should be made with 70% info you wish you had (反 90% info 派)",
+    "Day 2 is stasis, then irrelevance, then decline, then death (反 stable-phase 派)",
+    "禁 PPT 内部决策 — 强制 6-pager + silent reading (反 deck culture)",
+    "Customer obsession over competitor obsession (反 Porter 5 forces 派)",
+    "Mistakes 公开是信任货币 (Fire Phone 详细公开) (反 PR-managed CEO)",
+    "Founder mode + scale 可共存 (反 founder graduate to manager 共识)"
+  ],
+  "nuwa_phase_4_verdict": "PASS — Phase 4.1 已知 PASS / Phase 4.2 边缘 PARTIAL (按规标 self-verify) / Phase 4.3 风格 PASS",
+  "honest_boundary": "此 sub-skill 是 Bezos 25 年公开 corpus 的结构化镜片, 不是 Bezos 本人. 仅 anchored on public letters + Lex podcast + Working Backwards 公开记录; 不能预测 Bezos 内部未公开判断. 信息截止 2026-05-22."
+}
