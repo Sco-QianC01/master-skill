@@ -47,6 +47,8 @@
 
 ---
 
+> 🔥 &nbsp;**2026.05.27 SkillOpt 整合 + 第 13 个行业 — 公务员考试培训** — 从 Microsoft SkillOpt 借鉴 5 个机制整合进管线：**SLOW_UPDATE 保护区**（心智模型/表达DNA/智识谱系生成时自动标记，Phase 0C 增量更新时跳过）、**validation gate**（Phase 4 加权评分 + 关键失败检测，accept/reject 决策）、**patch editor**（4 种结构化编辑 + 保护区感知）、**meta skill memory**（跨蒸馏学习，记录每次管线指标和教训）、**DL 类比**（skill=权重，patch=梯度，edit budget=学习率）。用公务员考试培训（公考/国考/省考/行测/申论/面试全流程）做测试：171 条来源 / 60% 一手 / 7 心智模型 / 10 playbook / validation gate ACCEPT (0.90)。三巨头（中公/华图/粉笔）格局 + AI 降维冲击 + 协议班退费危机完整蒸馏。
+>
 > 🆕 &nbsp;**2026.05.10 第 12 个行业 — iOS 应用上架** — 第一个**平台 specific + 政策 12 月强制 deadline + 双合规体系** 的行业蒸出来。Apple 审核是黑盒（业内估拒绝率 20-40%），蒸的是**降低拒绝率 + 快速恢复**而不是「保过审」承诺。海外 Apple 单家 vs 国内 4 件套（ICP + 算法备案 + 游戏版号 + 8-10 应用市场）双合规体系不可一刀切。本轮**不蒸人物 sub-skill**（用户指示，验证 skip flag）。
 >
 > 🆕 &nbsp;**2026.05.09 第 11 个行业 — 用 AI agent 赚钱** — 蒸新兴商业行业（量大但 signal-to-noise 极差，90% 是 hype）。5 派互相挑衅（B2B SaaS / Indie hacker / 服务咨询 / VC观察 / 国内）对同问题给完全相反答案，蒸馏保留分歧不平均。3 个跨派人物 sub-skill：**Bret Taylor**（Sierra B2B）+ **Pieter Levels**（Indie 极致代表）+ **Hamel Husain**（咨询 + evals）。
@@ -322,8 +324,9 @@ python3 tools/update_skill.py finalize --skill-dir <skill>
 | ✅ **八字命理 / 玄学算命** | 传统文化（半敏感） | 中文 | [bazi-metaphysics-master/](prototypes/bazi-metaphysics-master/) |
 | ✅ **用 AI agent 赚钱** | 新兴商业 | 全球 | [monetize-agents-master/](prototypes/monetize-agents-master/) |
 | 🆕 **iOS 应用上架** | 平台 specific（政策高变化） | 全球 + 中文 | [ios-app-launch-master/](prototypes/ios-app-launch-master/) |
+| 🆕 **公务员考试培训** | 教育（强监管 + AI 冲击） | 中文 | [civil-service-exam-prep-master/](prototypes/civil-service-exam-prep-master/) |
 
-12 个行业横切技术 / 商业 / 内容运营 / 软技能 / 医疗 / 法律 / 金融 / 传统文化 / 新兴商业 / 平台 specific — 大师.skill 框架对各类行业都跑得通，包括「学派多互相挑衅」的新兴商业、「政策 12 月强制 deadline」的平台 specific。
+13 个行业横切技术 / 商业 / 内容运营 / 软技能 / 医疗 / 法律 / 金融 / 传统文化 / 新兴商业 / 平台 specific / 教育培训 — 大师.skill 框架对各类行业都跑得通，包括「学派多互相挑衅」的新兴商业、「政策 12 月强制 deadline」的平台 specific、「三巨头寡头 + AI 降维冲击」的教育培训。
 
 **最新行业「iOS 应用上架」的产物里有什么**：
 
@@ -347,6 +350,34 @@ python3 tools/update_skill.py finalize --skill-dir <skill>
 调研过程**完全透明**。每个样本都附完整的六路调研笔记 + 蒸馏文档，可以追溯每条心智模型、每条决策规则是从哪几个来源出来的。
 
 想蒸馏不在列表里的行业？装大师.skill，说「造大师 XXX」就行。
+
+---
+
+## 🧪 SkillOpt 整合 — 让蒸馏管线自我进化
+
+> 灵感来自 [Microsoft SkillOpt](https://github.com/microsoft/SkillOpt) 的 ReflACT 6 阶段闭环优化管线。SkillOpt 用深度学习类比（skill=权重，patch=梯度，edit budget=学习率）驱动 agent skill 的持续迭代。大师.skill 从中借鉴了 5 个核心机制：
+
+| 机制 | 文件 | 做什么 |
+|------|------|--------|
+| **SLOW_UPDATE 保护区** | `skill_writer.py` v1.4 | 生成的 SKILL.md 自动用 `<!-- SLOW_UPDATE_START/END -->` 标记低衰减区域（心智模型 / 表达 DNA / 智识谱系）。Phase 0C 增量更新时 patch editor 自动跳过这些区域 — 核心 OS 不被快速迭代冲散 |
+| **Validation Gate** | `tools/research/validation_gate.py` | Phase 4 的 accept/reject 门控。对 quality_check 的 15+ 项检验做加权评分，区分 critical failure（一票否决）和 partial（可接受降级）。输出：`accept` / `conditional_accept` / `reject` + 具体改进建议 |
+| **Patch Editor** | `tools/patch_editor.py` | 4 种结构化编辑操作（append / insert_after / replace / delete），每一步自动检测是否落入 SLOW_UPDATE 保护区。Phase 0C `update_skill.py apply-patch` 直接调用，替代「整段重写」 |
+| **Meta Skill Memory** | `tools/meta_skill.py` | 跨蒸馏学习记忆。每次管线跑完记录 gate score / 失败模式 / 管线教训到 `meta_skill_memory.json`。下次蒸馏前查 `meta_skill.py guidance`，获取累积的优化建议 |
+| **DL 类比框架** | 概念层 | skill = 模型权重（长期积累），patch = 梯度（单次更新），edit budget = 学习率（控制更新幅度），SLOW_UPDATE = 受保护层（frozen layers）。这个类比让 Phase 0C 的增量更新有了原则性约束 |
+
+```bash
+# 验证 SLOW_UPDATE 标记
+grep "SLOW_UPDATE" output/SKILL.md
+
+# 跑 validation gate
+python3 tools/research/validation_gate.py gate --skill-dir ./output
+
+# 用 patch editor 做增量更新（自动保护慢衰减区域）
+python3 tools/update_skill.py apply-patch --skill-dir ./output --patch patch.json --dry-run
+
+# 查看跨蒸馏学习
+python3 tools/meta_skill.py guidance
+```
 
 ---
 
@@ -400,6 +431,8 @@ master-skill/
 │   ├── update_skill.py               #   skill 增量刷新
 │   ├── install.py                    #   四宿主安装器
 │   ├── self_test.py                  #   全部样本 + 工具回归测试
+│   ├── patch_editor.py               #   SkillOpt: 4 种结构化编辑 + SLOW_UPDATE 保护
+│   ├── meta_skill.py                 #   SkillOpt: 跨蒸馏学习记忆
 │   ├── research/                     # 质量护栏 (v1.4 新)
 │   │   ├── source_verifier.py        #   每个 URL 自动判类 + 黑白名单
 │   │   ├── source_manifest.py        #   核对来源台账 + 一致性强制
@@ -407,6 +440,7 @@ master-skill/
 │   │   ├── cold_detector.py          #   行业冷僻自动兜底 (深挖模式)
 │   │   ├── refresh_sources.py        #   定期检测来源是否还在
 │   │   ├── quality_check.py          #   16 道自动检验
+│   │   ├── validation_gate.py        #   SkillOpt: accept/reject 门控 (加权评分)
 │   │   └── merge_research.py         #   调研评审聚合
 │   ├── collectors/                   # 自动抓行业 seed
 │   │   ├── github / arxiv / RSS / 播客 (4 件)
@@ -420,8 +454,9 @@ master-skill/
 │   ├── skill-template.md             #   生成产物的标准结构
 │   ├── extraction-framework.md       #   蒸馏方法论（三重验证 / 衰减表 / 流派分歧）
 │   └── cli-spec.md                   #   bash 工具的设计文档
+├── meta_skill_memory.json            # SkillOpt: 跨蒸馏学习记忆
 └── prototypes/
-    └── 9 个完整行业样本             #   见上面「已蒸馏的行业」列表
+    └── 13 个完整行业样本            #   见上面「已蒸馏的行业」列表
 ```
 
 ---
@@ -457,6 +492,7 @@ master-skill/
 | v1.4 | **质量护栏 + 第 9 个行业** — 自动跑 16 道质检 + URL 验真 + 黑名单强拦截 + 冷僻行业兜底（自动从协会 / 监管 / 招聘 / 课程多源补充）+ 新增**保险经纪人 / 代理人** | ✅ |
 | v1.5 | **第 10 个行业 — 八字命理 / 玄学算命** — 第一个半敏感 + 学派分歧大行业；同盘多派给不同结论保留分歧不平均；source_verifier 加 4 个古籍 archive 主源（ctext / guoxuedashi / wikisource / archive.org，命理 + 中医 + 历史 canon 永久受益） | ✅ |
 | v1.6 | **第 11+12 个行业 — 用 AI agent 赚钱 + iOS 应用上架** — 新兴商业（量大水分高，5 派互相挑衅）+ 平台 specific（政策 12 月强制 deadline + 双合规体系）。验证 `skip_sub_skills` flag（iOS 上架按用户指示跳人物蒸馏，节省 1 cron 周期）；iOS 上架 6 派对照（Apple 官方 / Indie / 大厂 release eng / ASO / 反 Apple / 国内合规）写完整 | ✅ |
+| v1.7 | **SkillOpt 整合 + 第 13 个行业 — 公务员考试培训** — 从 Microsoft SkillOpt 借鉴 5 个机制（SLOW_UPDATE 保护区 / validation gate / patch editor / meta skill memory / DL 类比）。用公考培训端到端验证：171 来源 / gate ACCEPT 0.90 / 3 个 SLOW_UPDATE 区域成功注入 | ✅ |
 | v2.x | PyPI 打包 / GitHub Action 自动更新 / 多语言文档 / 工具 marketplace | 🔲 |
 
 详见 [ROADMAP.md](ROADMAP.md)。
