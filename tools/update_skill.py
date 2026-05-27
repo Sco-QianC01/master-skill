@@ -340,6 +340,49 @@ end run' "$(cat)"</string>
     return 0
 
 
+def cmd_apply_patch(args) -> int:
+    """Apply a structured patch to SKILL.md with slow-update protection.
+
+    Inspired by SkillOpt's ReflACT Update stage. Uses patch_editor.py for
+    atomic edit operations that respect SLOW_UPDATE-protected regions.
+    """
+    skill_dir = Path(args.skill_dir).resolve()
+    skill_md = skill_dir / "SKILL.md"
+    patch_path = Path(args.patch).resolve()
+
+    if not skill_md.exists():
+        print(f"✗ SKILL.md not found at {skill_md}", file=sys.stderr)
+        return 1
+    if not patch_path.exists():
+        print(f"✗ patch file not found: {patch_path}", file=sys.stderr)
+        return 1
+
+    # Import patch_editor from sibling module
+    tools_dir = Path(__file__).resolve().parent
+    sys.path.insert(0, str(tools_dir))
+    import patch_editor
+
+    result = patch_editor.apply_patch_from_file(
+        skill_md, patch_path, dry_run=args.dry_run,
+    )
+
+    if args.json:
+        print(json.dumps(result, indent=2, ensure_ascii=False))
+    else:
+        print(f"📂 skill: {skill_dir.name}")
+        print(f"Applied: {result['applied']}/{result['total_edits']}")
+        print(f"Skipped (protected): {result['skipped_protected']}")
+        print(f"Skipped (other): {result['skipped_other']}")
+        print(f"Errors: {result['errors']}")
+        if args.dry_run:
+            print("(dry-run — no files changed)")
+        for r in result["reports"]:
+            status_icon = "✓" if r["status"].startswith("applied") else "⊘"
+            print(f"  {status_icon} [{r['index']}] {r['op']}: {r['status']}")
+
+    return 0 if result["errors"] == 0 else 1
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="update / decay tool for master skills")
     sub = parser.add_subparsers(dest="action", required=True)
@@ -364,6 +407,13 @@ def main() -> None:
     p_schedule.add_argument("--write", action="store_true",
                              help="把 plist 直接写到 ~/Library/LaunchAgents/ (默认只打印)")
 
+    p_patch = sub.add_parser("apply-patch",
+                              help="Apply structured edits to SKILL.md with slow-update protection")
+    p_patch.add_argument("--skill-dir", required=True)
+    p_patch.add_argument("--patch", required=True, help="Path to patch.json (SkillOpt edit format)")
+    p_patch.add_argument("--dry-run", action="store_true")
+    p_patch.add_argument("--json", action="store_true")
+
     args = parser.parse_args()
 
     if args.action == "plan":
@@ -376,6 +426,8 @@ def main() -> None:
         sys.exit(cmd_finalize(args))
     elif args.action == "schedule":
         sys.exit(cmd_schedule(args))
+    elif args.action == "apply-patch":
+        sys.exit(cmd_apply_patch(args))
 
 
 if __name__ == "__main__":

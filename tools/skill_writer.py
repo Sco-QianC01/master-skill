@@ -53,7 +53,11 @@ META_FIELDS = [
     "changelog",
 ]
 
-GENERATOR_VERSION = "master-skill v1.3"
+GENERATOR_VERSION = "master-skill v1.4"
+
+SLOW_UPDATE_START = "<!-- SLOW_UPDATE_START -->"
+SLOW_UPDATE_END = "<!-- SLOW_UPDATE_END -->"
+SLOW_SECTIONS = {"mental_models", "expression_dna", "intellectual_genealogy"}
 
 
 # ---------------------------------------------------------------------------
@@ -409,7 +413,12 @@ def inject_synthesis_body(skill_md: str, synthesis_sections: dict[str, str],
             r"^##\s+\d+\.\s+[^\n]+\n", f"## {friendly_heading}\n", section,
             count=1, flags=re.MULTILINE,
         )
-        parts.append(section_body.strip())
+        if key in SLOW_SECTIONS:
+            parts.append(SLOW_UPDATE_START)
+            parts.append(section_body.strip())
+            parts.append(SLOW_UPDATE_END)
+        else:
+            parts.append(section_body.strip())
         parts.append("")
 
     parts.append(build_time_decay_registry(synthesis_sections, research_date))
